@@ -1,0 +1,322 @@
+.incidents-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.incidents-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.page-title {
+  font-size: 1.75rem;
+  color: #1e293b;
+  font-weight: 600;
+  margin: 0;
+}
+.add-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.add-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+.filters-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.search-bar {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.search-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+.search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: #94a3b8;
+}
+.filters-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.filter-select {
+  flex: 1;
+  min-width: 150px;
+  padding: 0.6rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+.filter-select:focus {
+  outline: none;
+  border-color: #667eea;
+}
+.incidents-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.incident-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.incident-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.incident-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+}
+.incident-title {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.incident-id {
+  font-size: 0.85rem;
+  color: #64748b;
+  font-weight: 500;
+}
+.incident-company {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+.analyze-btn {
+  background: none;
+  border: none;
+  color: #667eea;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+.analyze-btn:hover {
+  color: #764ba2;
+}
+.incident-card-content {
+  padding: 1.5rem;
+}
+.incident-details {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.detail-icon {
+  font-size: 1rem;
+}
+.detail-text {
+  font-size: 0.9rem;
+  color: #1e293b;
+}
+.detail-text.positive {
+  color: #22c55e;
+  font-weight: 600;
+}
+.detail-text.negative {
+  color: #ef4444;
+  font-weight: 600;
+}
+.severity-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.severity-badge.critical {
+  background: #fee2e2;
+  color: #dc2626;
+}
+.severity-badge.high {
+  background: #ffedd5;
+  color: #f97316;
+}
+.severity-badge.medium {
+  background: #fef9c3;
+  color: #eab308;
+}
+.severity-badge.low {
+  background: #dcfce7;
+  color: #22c55e;
+}
+.incident-description {
+  color: #475569;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+.incident-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+.pagination-btn {
+  background: white;
+  border: 1px solid #e2e8f0;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+.pagination-btn:hover:not(:disabled) {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+.pagination-btn.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.pagination-info {
+  margin-left: 1rem;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+.no-incidents {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 12px;
+  color: #64748b;
+}
+.no-incidents p:first-child {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.no-incidents-sub {
+  font-size: 0.9rem;
+}
+.incidents-page.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+.loader {
+  font-size: 1rem;
+  color: #667eea;
+  animation: pulse 1s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }  50% { opacity: 0.5; }}
+@media (max-width: 768px) {
+  .incidents-header {
+    flex-direction: column;
+    align-items: stretch;
+  }  
+  .add-button {
+    text-align: center;
+  }  
+  .filters-row {
+    flex-direction: column;
+  }  
+  .filter-select {
+    width: 100%;
+  }  
+  .incident-details {
+    gap: 0.75rem;
+  }  
+  .incident-card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }  
+  .pagination {
+    gap: 0.25rem;
+  }  
+  .pagination-btn {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.75rem;
+  }  
+  .pagination-info {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }}
+.incident-meta {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+.meta-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: #f1f5f9;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  color: #475569;
+}

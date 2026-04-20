@@ -1,0 +1,374 @@
+.company-page {
+  height: calc(100vh - 120px);
+  overflow: hidden;
+}
+.company-layout {
+  display: flex;
+  height: 100%;
+  gap: 1.5rem;
+  background: #f5f7fa;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.company-sidebar {
+  width: 320px;
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.sidebar-header {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+.sidebar-header h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #1e293b;
+}
+.search-box {
+  position: relative;
+}
+.search-box .search-input {
+  width: 100%;
+  padding: 0.6rem 0.75rem 0.6rem 2rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+.search-box .search-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+.search-box .search-icon {
+  position: absolute;
+  left: 0.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+.company-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.5rem;
+}
+.company-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.company-item:hover {
+  background: #f1f5f9;
+}
+.company-item.active {
+  background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+  border-left: 3px solid #667eea;
+}
+.company-info .company-name {
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 0.9rem;
+}
+.company-info .company-ticker {
+  font-size: 0.7rem;
+  color: #64748b;
+  margin-top: 0.2rem;
+}
+.company-badges {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+.exchange-badge {
+  font-size: 0.65rem;
+  padding: 0.15rem 0.4rem;
+  background: #e2e8f0;
+  border-radius: 4px;
+  color: #475569;
+}
+.impact-badge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+}
+.impact-badge.negative {
+  color: #ef4444;
+  background: #fee2e2;
+}
+.impact-badge.positive {
+  color: #22c55e;
+  background: #dcfce7;
+}
+.company-detail {
+  flex: 1;
+  background: white;
+  border-radius: 12px;
+  overflow-y: auto;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+.company-title h1 {
+  font-size: 1.5rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+.company-meta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.meta-item {
+  font-size: 0.8rem;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+}
+.detail-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+.action-btn {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #e2e8f0;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.2s;
+}
+.action-btn:hover {
+  background: #f8fafc;
+  border-color: #667eea;
+}
+.stats-section {
+  margin-bottom: 1.5rem;
+}
+.section-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.stat-card {
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+}
+.stat-value {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #1e293b;
+}
+.stat-value.negative {
+  color: #ef4444;
+}
+.stat-value.positive {
+  color: #22c55e;
+}
+.stat-label {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+.stat-sub {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  margin-top: 0.25rem;
+}
+.chart-section {
+  margin-bottom: 1.5rem;
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 12px;
+}
+.mini-chart {
+  margin-top: 0.5rem;
+}
+.chart-svg {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+.chart-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  color: #475569;
+}
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.legend-dot.negative {
+  background: #ef4444;
+}
+.legend-dot.positive {
+  background: #22c55e;
+}
+.incidents-history {
+  margin-bottom: 1.5rem;
+}
+.history-table-container {
+  overflow-x: auto;
+}
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+.history-table th,
+.history-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e2e8f0;
+}
+.history-table th {
+  background: #f8fafc;
+  font-weight: 600;
+  color: #1e293b;
+}
+.history-table tr:hover {
+  background: #f8fafc;
+}
+.severity-badge {
+  padding: 0.2rem 0.5rem;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  display: inline-block;
+}
+.severity-badge.critical {
+  background: #fee2e2;
+  color: #dc2626;
+}
+.severity-badge.high {
+  background: #ffedd5;
+  color: #f97316;
+}
+.severity-badge.medium {
+  background: #fef9c3;
+  color: #eab308;
+}
+.severity-badge.low {
+  background: #dcfce7;
+  color: #22c55e;
+}
+.positive {
+  color: #22c55e;
+  font-weight: 600;
+}
+.negative {
+  color: #ef4444;
+  font-weight: 600;
+}
+.detail-link {
+  color: #667eea;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+.detail-link:hover {
+  text-decoration: underline;
+}
+.company-description {
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+.company-description h4 {
+  font-size: 0.85rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+.company-description p {
+  font-size: 0.85rem;
+  color: #475569;
+  line-height: 1.5;
+}
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: #64748b;
+}
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+.empty-state h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #1e293b;
+}
+.empty-state p {
+  font-size: 0.85rem;
+  max-width: 300px;
+}
+.company-page.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+.loader {
+  font-size: 1rem;
+  color: #667eea;
+  animation: pulse 1s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }  50% { opacity: 0.5; }}
+@media (max-width: 768px) {
+  .company-layout {
+    flex-direction: column;
+    height: auto;
+  }  
+  .company-sidebar {
+    width: 100%;
+    max-height: 300px;
+  }  
+  .company-detail {
+    max-height: 600px;
+  }  
+  .stats-cards {
+    grid-template-columns: 1fr;
+  }  
+  .company-meta {
+    flex-wrap: wrap;
+  }}   
